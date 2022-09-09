@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <ul>
+        @for(int i = 0; i <= 9; i++) 
+        {
+            <li>如果浏览器中没有任何更改，则可能是正在查看的缓存内容。 在浏览器中按 Ctrl + F5 强制加载来自服务器的响应。</li>
+        }
+    </ul>
+    <div>
+        @ViewData["UUID"]
+    </div>
+</div>
