@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using FormLogic.Data;
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<FormLogicContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("FormLogicContext") ?? throw new InvalidOperationException("Connection string 'FormLogicContext' not found.")));
@@ -20,6 +22,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Content")),
+    RequestPath = "/Content"
+});
 
 app.UseRouting();
 

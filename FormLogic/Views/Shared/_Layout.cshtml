@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FormLogic</title>
-    <link rel="stylesheet" href="~/Library/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Library/bootstrap-table/bootstrap-table.css" asp-append-version="true" />
-    
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-table/bootstrap-table.css" asp-append-version="true" />
+
 </head>
 <body>
     <header>
@@ -44,9 +45,10 @@
             &copy; 2022 - FormLogic - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/Library/jquery/jquery.min.js"></script>
-    <script src="~/Library/bootstrap/bootstrap.min.js"></script>
-    <script src="~/Library/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/bootstrap-table/bootstrap-table.js"></script>
+    <script src="~/js/site.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -5,13 +5,175 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <ul>
-        @for(int i = 0; i <= 9; i++) 
-        {
-            <li>如果浏览器中没有任何更改，则可能是正在查看的缓存内容。 在浏览器中按 Ctrl + F5 强制加载来自服务器的响应。</li>
-        }
-    </ul>
-    <div>
-        @ViewData["UUID"]
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr class="table-success">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr class="table-info">
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">3</th>
+                <td colspan="2" class="table-active">Larry the Bird</td>
+                <td>twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-success table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2" class="table-active">Larry the Bird</td>
+                <td>twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-dark table-borderless table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <caption>List of users</caption>
+            <thead class="table-light">
+                <tr class="align-baseline">
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Second</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="align-top">
+                    <th scope="row">1</th>
+                    <td>故人西辞黄鹤楼</td>
+                    <td>烟花三月下扬州</td>
+                    <td>孤帆远影碧空尽</td>
+                    <td>
+                        <div>
+                            <p>故人西辞黄鹤楼</p>
+                            <p>烟花三月下扬州</p>
+                            <p>孤帆远影碧空尽</p>
+                            <p>未见长江天际流</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="align-bottom">
+                    <th scope="row">2</th>
+                    <td>故人西辞黄鹤楼</td>
+                    <td>烟花三月下扬州</td>
+                    <td>孤帆远影碧空尽</td>
+                    <td>
+                        <div>
+                            <p>故人西辞黄鹤楼</p>
+                            <p>烟花三月下扬州</p>
+                            <p>孤帆远影碧空尽</p>
+                            <p>未见长江天际流</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="align-middle">
+                    <th scope="row">3</th>
+                    <td>故人西辞黄鹤楼</td>
+                    <td>烟花三月下扬州</td>
+                    <td>孤帆远影碧空尽</td>
+                    <td>
+                        <div>
+                            <p>故人西辞黄鹤楼</p>
+                            <p>烟花三月下扬州</p>
+                            <p>孤帆远影碧空尽</p>
+                            <p>未见长江天际流</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="align-text-bottom">
+                    <th scope="row">4</th>
+                    <td>故人西辞黄鹤楼</td>
+                    <td>烟花三月下扬州</td>
+                    <td>孤帆远影碧空尽</td>
+                    <td>
+                        <div>
+                            <p>故人西辞黄鹤楼</p>
+                            <p>烟花三月下扬州</p>
+                            <p>孤帆远影碧空尽</p>
+                            <p>未见长江天际流</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot class="table-dark">
+                <tr class="align-top">
+                    <th scope="row">5</th>
+                    <td>故人西辞黄鹤楼</td>
+                    <td>烟花三月下扬州</td>
+                    <td>孤帆远影碧空尽</td>
+                    <td>未见长江天际流</td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 </div>
